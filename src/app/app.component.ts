@@ -116,7 +116,7 @@ export class AppComponent implements OnInit, OnDestroy
                 this._ngZone.run(() =>
                 {
                     this.isError    = true;
-                    this.message    = 'Configuration Failed';
+                    this.message    = 'Falha no arquivo de configurações';
                 });
                 return;
             case Nitro.WEBGL_UNAVAILABLE:
@@ -144,13 +144,13 @@ export class AppComponent implements OnInit, OnDestroy
                 this._ngZone.run(() =>
                 {
                     this.isError    = true;
-                    this.message    = 'Handshake Failed';
+                    this.message    = 'Falha na comunicação com o emulador (Verifique ticket e conexões)';
                 });
                 return;
             case NitroCommunicationDemoEvent.CONNECTION_AUTHENTICATED:
                 this._ngZone.run(() =>
                 {
-                    this.message = 'Finishing Up';
+                    this.message = 'Entrando no hotel';
                 });
 
                 Nitro.instance.init();
@@ -163,7 +163,7 @@ export class AppComponent implements OnInit, OnDestroy
                 this._ngZone.run(() =>
                 {
                     this.isError    = true;
-                    this.message    = 'Connection Error';
+                    this.message    = 'Erro de conexão';
                 });
                 return;
             case NitroCommunicationDemoEvent.CONNECTION_CLOSED:
@@ -172,7 +172,7 @@ export class AppComponent implements OnInit, OnDestroy
                 this._ngZone.run(() =>
                 {
                     this.isError    = true;
-                    this.message    = 'Connection Closed';
+                    this.message    = 'Conexão encerrada';
                 });
 
                 LegacyExternalInterface.call('disconnect', -1, 'client.init.handshake.fail');
@@ -187,7 +187,7 @@ export class AppComponent implements OnInit, OnDestroy
                     {
                         this._ngZone.run(() =>
                         {
-                            this.message = 'Connecting';
+                            this.message = 'Conectando';
                         });
 
                         Nitro.instance.communication.init();
@@ -197,7 +197,7 @@ export class AppComponent implements OnInit, OnDestroy
                         this._ngZone.run(() =>
                         {
                             this.isError    = true;
-                            this.message    = 'Assets Failed';
+                            this.message    = 'Falha ao carregar Assets';
                         });
                     }
                 });
