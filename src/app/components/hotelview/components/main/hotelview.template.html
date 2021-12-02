@@ -1,66 +1,64 @@
-<div class="hotel-bosluk">
-    <div class="view_bg" [ngStyle]="{backgroundImage: 'url('+background+')'}"></div>
+<div class="hotel-bosluk" style="background-image: url(/assets/images/hotelview/background_gradient_habbohistory.png);">
     <div class="habbo-drape">
         <img [src]="drape" image-placeholder>
     </div>
-    <div class="hotelview_habbo-avatar" nitro-avatar-image [figure]="figure" [direction]="2"></div>
-    <img class="bosluk-sol" [src]="left" image-placeholder />
-    <img class="bosluk-sag" [src]="right" image-placeholder />
-
-
-    <div class="modern-carousel">
-        <div class="leftclick"></div>
-        <div class="carousel-main">
-            <div class="carousel-tab">
-                <div class="carousel-spromo_hidden">
-                    <div class="carousel-promoimg" [ngStyle]="{backgroundImage: 'url('+carousel1+')'}"></div>
-                </div>
-                <div class="carousel-text">
-                    <div class="carousel-name">{{ ('hotel.view.header.1') | translate }}</div>
-                    <div class="carousel-description">{{ ('hotel.view.description.1') | translate }}</div>
-                    <a href="{{ ('hotel.view.link.1') | translate }}" target="_blank"><div class="carousel-button">{{ ('hotel.view.button.1') | translate }}</div></a>
-                </div>
+    <div class="hotel-view-haber-box">
+        <div class="view-haber"> <!-- hotel view news 1 -->
+            <div class="hv-haber-gorsel">
+                <img [src]="promo1">
             </div>
-            <div class="carousel-tab">
-                <div class="carousel-spromo_hidden">
-                    <div class="carousel-promoimg" [ngStyle]="{backgroundImage: 'url('+carousel2+')'}"></div>
+            <div class="hv-haber-baslik">{{ ('hotel.view.header.1') | translate }}</div>
+            <div class="hv-haber-aciklama">{{ ('hotel.view.description.1') | translate }}</div>
+            <a href="https://your_link" target="_blank">
+                <div class="view-buton">
+                    <p class="vb-text">{{ ('hotel.view.button.1') | translate }}</p>
                 </div>
-                <div class="carousel-text">
-                    <div class="carousel-name">{{ ('hotel.view.header.2') | translate }}</div>
-                    <div class="carousel-description">{{ ('hotel.view.description.2') | translate }}</div>
-                    <a href="{{ ('hotel.view.link.2') | translate }}" target="_blank"><div class="carousel-button">{{ ('hotel.view.button.2') | translate }}</div></a>
-                </div>
-            </div>
-            <div class="carousel-tab">
-                <div class="carousel-spromo_hidden">
-                    <div class="carousel-promoimg" [ngStyle]="{backgroundImage: 'url('+carousel3+')'}"></div>
-                </div>
-                <div class="carousel-text">
-                    <div class="carousel-name">{{ ('hotel.view.header.3') | translate }}</div>
-                    <div class="carousel-description">{{ ('hotel.view.description.3') | translate }}</div>
-                    <a href="{{ ('hotel.view.link.3') | translate }}" target="_blank"><div class="carousel-button">{{ ('hotel.view.button.3') | translate }}</div></a>
-                </div>
-            </div>
-            <div class="carousel-tab">
-                <div class="carousel-spromo_hidden">
-                    <div class="carousel-promoimg" [ngStyle]="{backgroundImage: 'url('+carousel4+')'}"></div>
-                </div>
-                <div class="carousel-text">
-                    <div class="carousel-name">{{ ('hotel.view.header.4') | translate }}</div>
-                    <div class="carousel-description">{{ ('hotel.view.description.4') | translate }}</div>
-                    <a href="{{ ('hotel.view.link.4') | translate }}" target="_blank"><div class="carousel-button">{{ ('hotel.view.button.4') | translate }}</div></a>
-                </div>
-            </div>
+            </a>
         </div>
-        <div class="rightclick"></div>
-    </div>
 
-
-    <!-- mobile view -->
-    <div class="mobile-view">
-        <div class="mview-main">
-            <div class="mview-wassup">{{ ('pet.vocals.15.GENERIC_NEUTRAL.0') | translate }}</div>
+        <div class="view-haber"> <!-- hotel view news 2 -->
+            <div class="hv-haber-gorsel">
+                <img [src]="promo2">
+            </div>
+            <div class="hv-haber-baslik">{{ ('hotel.view.header.2') | translate }}</div>
+            <div class="hv-haber-aciklama">{{ ('hotel.view.description.2') | translate }}</div>
+            <a href="https://your_link" target="_blank">
+                <div class="view-buton">
+                    <p class="vb-text">{{ ('hotel.view.button.2') | translate }}</p>
+                </div>
+            </a>
         </div>
     </div>
+    <div class="hw-haber-ex2">
+        <div class="view-haber"> <!-- hotel view news 3 -->
+            <div class="hv-haber-gorsel">
+                <img [src]="promo3">
+            </div>
+            <div class="hv-haber-baslik">{{ ('hotel.view.header.3') | translate }}</div>
+            <div class="hv-haber-aciklama">{{ ('hotel.view.description.3') | translate }}</div>
+            <a href="https://your_link" target="_blank">
+                <div class="view-buton">
+                    <p class="vb-text">{{ ('hotel.view.button.3') | translate }}</p>
+                </div>
+            </a>
+        </div>
 
+        <div class="view-haber"> <!-- hotel view news 4 -->
+            <div class="hv-haber-gorsel">
+                <img [src]="promo4">
+            </div>
+            <div class="hv-haber-baslik">{{ ('hotel.view.header.4') | translate }}</div>
+            <div class="hv-haber-aciklama">{{ ('hotel.view.description.4') | translate }}</div>
+            <a href="https://your_link" target="_blank">
+                <div class="view-buton">
+                    <p class="vb-text">{{ ('hotel.view.button.4') | translate }}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="bosluk-sol">
+        <div class="hotelview_habbo-avatar" nitro-avatar-image [figure]="figure" [direction]="2"></div>
+        <img src="/assets/images/hotelview/reception_backdrop_left_rev.png">
+    </div>
+    <div class="bosluk-sag" style="background-image: url(/assets/images/hotelview/habbo15_background_right.png);"></div>
 </div>

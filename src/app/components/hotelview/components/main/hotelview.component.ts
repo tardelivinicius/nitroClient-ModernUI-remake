@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Nitro, ToolbarIconEnum } from '@nitrots/nitro-renderer';
-import * as $ from "jquery";
-import { SettingsService } from '../../../../core/settings/service';
+import { Nitro } from '@nitrots/nitro-renderer';
 import { SessionService } from '../../../../security/services/session.service';
 
 @Component({
@@ -17,13 +15,12 @@ export class HotelViewComponent
     private _left: string;
     private _right: string;
     private _rightRepeat: string;
-    private _carousel1: string;
-    private _carousel2: string;
-    private _carousel3: string;
-    private _carousel4: string;
+    private _promo1: string;
+    private _promo2: string;
+    private _promo3: string;
+    private _promo4: string;
 
     constructor(
-        private settingsService: SettingsService,
         private sessionService: SessionService)
     {
         this._background        = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['background']);
@@ -33,64 +30,11 @@ export class HotelViewComponent
         this._left              = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['left']);
         this._right             = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['right']);
         this._rightRepeat       = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['right.repeat']);
-        this._carousel1         = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['carousel1']);
-        this._carousel2         = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['carousel2']);
-        this._carousel3         = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['carousel3']);
-        this._carousel4         = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['carousel4']);
-    }
-
-    public ngOnInit(): void
-    {
+        this._promo1      = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['promo1']);
+        this._promo2      = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['promo2']);
+        this._promo3      = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['promo3']);
+        this._promo4      = Nitro.instance.core.configuration.interpolate(Nitro.instance.getConfiguration('hotelview.images')['promo4']);
         
-        $(document).ready(function(){
-            
-         
-          
-            $(".rightclick").click(function(){
-                var i = $(".carousel-main").scrollLeft();
-
-                $(".carousel-main").scrollLeft(i + 700);
-            })
-
-            $(".leftclick").click(function(){
-                var i = $(".carousel-main").scrollLeft();
-
-                $(".carousel-main").scrollLeft(i - 700);
-            })
-
-
-
-        })
-
-    }
-
-    public clickIcon(name: string): void
-    {
-        if(!name || (name === '')) return;
-
-        switch(name)
-        {
-            case ToolbarIconEnum.CATALOG:
-                this.toggleCatalog();
-        }
-    }
-
-    public getIconName(icon: string): string
-    {
-        switch(icon)
-        {
-
-            case ToolbarIconEnum.CATALOG:
-                return 'icon-catalog';
-
-            default:
-                return '';
-        }
-    }
-
-    public toggleCatalog(): void
-    {
-        this.settingsService.toggleCatalog();
     }
 
     public get figure(): string
@@ -133,23 +77,24 @@ export class HotelViewComponent
         return (this._rightRepeat || null);
     }
 
-    public get carousel1(): string
+    public get promo1(): string
     {
-        return (this._carousel1 || null);
+        return (this._promo1 || null);
     }
 
-    public get carousel2(): string
+    public get promo2(): string
     {
-        return (this._carousel2 || null);
+        return (this._promo2 || null);
     }
 
-    public get carousel3(): string
+    public get promo3(): string
     {
-        return (this._carousel3 || null);
+        return (this._promo3 || null);
     }
 
-    public get carousel4(): string
+    public get promo4(): string
     {
-        return (this._carousel4 || null);
+        return (this._promo4 || null);
     }
+    
 }
