@@ -617,7 +617,7 @@ input[type="text"] {
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image: url('^assets/images/oda-gezgini.png');
+    background-image: url('^assets/images/toolbar/icons/rooms.png');
 }
 
 .magaza {
@@ -628,7 +628,7 @@ input[type="text"] {
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image: url('^assets/images/magaza.png');
+    background-image: url('^assets/images/toolbar/icons/catalog.png');
 }
 
 .kamera {
@@ -639,7 +639,7 @@ input[type="text"] {
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image: url('^assets/images/kamera.png');
+    background-image: url('^assets/images/toolbar/icons/camera.png');
 }
 
 .envanter {
@@ -650,7 +650,7 @@ input[type="text"] {
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image: url('^assets/images/envanter.png');
+    background-image: url('^assets/images/toolbar/icons/inventory.png');
     position: relative;
 }
 
@@ -934,7 +934,7 @@ input[type="text"] {
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image: url('^assets/images/sohbet.png');
+    background-image: url('^assets/images/toolbar/icons/friend_all.png');
     position: relative;
 }
 
