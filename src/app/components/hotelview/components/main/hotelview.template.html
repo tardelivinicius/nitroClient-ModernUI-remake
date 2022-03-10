@@ -58,7 +58,7 @@
     </div>
     <div class="bosluk-sol">
         <div class="hotelview_habbo-avatar" nitro-avatar-image [figure]="figure" [direction]="2"></div>
-        <img src="/assets/images/hotelview/reception_backdrop_left_rev.png">
+        <img [src]="hotelViewLeft">
     </div>
-    <div class="bosluk-sag" style="background-image: url(/assets/images/hotelview/habbo15_background_right.png);"></div>
+    <div class="bosluk-sag" [style.background-image]="'url(' + hotelViewRight + ')'"></div>
 </div>
